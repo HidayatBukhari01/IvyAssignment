@@ -143,13 +143,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: () {
+                      onTap: () async {
                         try {
-                          googleAuth.signInWithGoogle();
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HomeScreen()));
+                          await googleAuth.signInWithGoogle().then((value) {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const HomeScreen()));
+                          });
                         } catch (e) {
                           print(e.toString());
                         }
@@ -161,9 +162,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         height: 50,
                         width: 100,
-                        child: Column(
+                        child: const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             Icon(
                               FontAwesomeIcons.google,
                               color: Colors.white,

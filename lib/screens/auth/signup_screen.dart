@@ -172,13 +172,14 @@ class _LoginScreenState extends State<SignUpScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
                       try {
-                        googleAuth.signInWithGoogle();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HomeScreen()));
+                        await googleAuth.signInWithGoogle().then((value) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const HomeScreen()));
+                        });
                       } catch (e) {
                         print(e.toString());
                       }
