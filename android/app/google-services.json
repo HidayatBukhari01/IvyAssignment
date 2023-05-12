@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "618611862636",
+    "project_id": "ivykids-assignment",
+    "storage_bucket": "ivykids-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618611862636:android:6a56476d1b8bc62077bc49",
+        "android_client_info": {
+          "package_name": "com.hidayat.ivykids_assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618611862636-7t3erlvqpjfkgdbugf0lm5m3jqt95rlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlJfNhCHLJntu8Ki7FXkXTXUodAugqpF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618611862636-7t3erlvqpjfkgdbugf0lm5m3jqt95rlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
